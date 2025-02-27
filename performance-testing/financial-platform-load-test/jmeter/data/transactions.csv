@@ -1,0 +1,4 @@
+transaction_id,amount,account_id
+TXN-001,100.00,ACC-001
+TXN-002,200.50,ACC-002
+TXN-003,500.00,ACC-003

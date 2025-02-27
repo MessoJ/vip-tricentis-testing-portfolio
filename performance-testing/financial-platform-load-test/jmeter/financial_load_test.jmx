@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.5">
+  <hashTree>
+    <TestPlan>
+      <stringProp name="TestPlan.comments">VIP-Aligned Financial Load Test</stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup>
+        <name>Transaction Users</name>
+        <numThreads>10000</numThreads>
+        <rampTime>300</rampTime>
+        <CSVDataSet>
+          <name>Transaction Data</name>
+          <filename>data/transactions.csv</filename>
+          <variableNames>transaction_id,amount,account_id</variableNames>
+        </CSVDataSet>
+        <HTTPSamplerProxy>
+          <name>Post Transaction</name>
+          <domain>api.financial-client.com</domain>
+          <path>/transactions</path>
+          <method>POST</method>
+          <Arguments>
+            <Argument>
+              <name>payload</name>
+              <value>{ "transaction_id": "${transaction_id}", "amount": ${amount}, "account_id": "${account_id}" }</value>
+            </Argument>
+          </Arguments>
+        </HTTPSamplerProxy>
+      </ThreadGroup>
+      <ResultsCollector>
+        <name>Summary Report</name>
+        <filename>results/summary.csv</filename>
+      </ResultsCollector>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

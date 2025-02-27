@@ -1,1 +1,6 @@
-
+{
+  "patients": [
+    {"id": "P-1001", "service_code": "A123", "eligible": true},
+    {"id": "P-1002", "service_code": "B456", "eligible": false}
+  ]
+}

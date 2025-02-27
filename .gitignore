@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# Data
+*.csv
+*.json
+
+# Secrets
+.env
+*.ini

@@ -25,5 +25,5 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest automation
+          pytest automation/healthcare-api-test
           

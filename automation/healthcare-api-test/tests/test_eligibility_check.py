@@ -3,7 +3,7 @@ import pytest
 import json
 
 # Load mock data
-with open("data/test_data.json") as f:
+with open("automation/healthcare-api-test/data/test_data.json") as f:
     test_data = json.load(f)
 
 @pytest.mark.parametrize("patient", test_data["patients"])

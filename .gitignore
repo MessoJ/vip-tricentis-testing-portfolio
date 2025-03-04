@@ -2,6 +2,9 @@
 __pycache__/
 *.pyc
 
+pytest==7.0.1
+requests==2.28.1
+
 # Data
 *.csv
 *.json

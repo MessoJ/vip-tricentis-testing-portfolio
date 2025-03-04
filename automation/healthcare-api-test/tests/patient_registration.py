@@ -4,7 +4,7 @@ import json
 
 # Mock API endpoint and test data
 API_BASE_URL = "https://api.healthcare-example.com/v1"
-TEST_DATA_URL = "https://gist.githubusercontent.com/mock-healthcare-data/123456/raw/patient_registration_data.json"
+TEST_DATA_URL = "https://github.com/MessoJ/vip-tricentis-testing-portfolio/tree/main/automation/healthcare-api-test/data/test_data.json"
 
 @pytest.fixture
 def registration_data():

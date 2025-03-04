@@ -1,6 +1,7 @@
 import requests
 import pytest
 import json
+import responses
 
 # Load mock data
 with open("automation/healthcare-api-test/data/test_data.json") as f:
